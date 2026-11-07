@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'Kanit', sans-serif; color: #D7E2EA; background: #0C0C0C; font-synthesis: none; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body, #root { min-height: 100%; width: 100%; background: #0C0C0C; }
+html { scroll-behavior: smooth; }
+body { overflow-x: clip; }
+button, a { -webkit-tap-highlight-color: transparent; }
+::selection { background: #B600A8; color: white; }
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #BBCCD7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.marquee-track { display: flex; width: max-content; gap: 12px; will-change: transform; }
+.marquee-tile { width: 420px; height: 270px; flex: 0 0 auto; border-radius: 16px; object-fit: cover; background: #1b1b1b; }
+.project-image { width: 100%; height: 100%; object-fit: cover; border-radius: 40px; background: #1b1b1b; }
+.outline-offset { outline: 2px solid #fff; outline-offset: -3px; }
+@media (max-width: 639px) {
+  .marquee-tile { width: 260px; height: 170px; }
+  .project-image { border-radius: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
