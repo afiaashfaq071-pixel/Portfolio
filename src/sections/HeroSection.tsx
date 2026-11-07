@@ -1,4 +1,4 @@
-import picture from '../assets/pic.png';
+import picture from '../assets/pic.png'
 import FadeIn from '../components/FadeIn';
 import ContactButton from '../components/ContactButton';
 import Magnet from '../components/Magnet';
